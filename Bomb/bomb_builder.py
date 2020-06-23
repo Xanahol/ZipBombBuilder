@@ -5,7 +5,7 @@ import zipfile
 import trigger as Trigger
 import sys
 
-myLocalDirectory = r'D:\Bomb'
+myLocalDirectory = r'Directory' #<--------YOUR DIRECTORY
 
 def writeOnLine(st):
     sys.stdout.write(st)
@@ -13,43 +13,18 @@ def writeOnLine(st):
 
 
 def explosionCleanupCrew(amount):
-    writeOnLine("[")
-    for i in range(amount):
-        for a in range(10):
-            os.remove('{}\Bomb{}'.format(myLocalDirectory, i) +
-                      r'\t' + 'est {}.txt'.format(a))
-        os.rmdir('{}\Bomb{}'.format(myLocalDirectory, i))
-        writeOnLine("#")
-    os.remove('test.txt')
-    os.remove('bomb.zip')
-    writeOnLine("]")
+    #I remove all unnescecairy directories and files
 
 
 def build(a):
     size = 10**a
     f = open("test.txt", "w+")
     print("\nWriting Files...")
-    writeOnLine("[")
-    for i in range(0, size):
-        f.write("This Statement should be repeated a lot of times and compressed")
-
-    for i in range(10):
-        original = '{}'.format(myLocalDirectory) + r'\test.txt'
-        target = '{}'.format(myLocalDirectory) + \
-            r'\test '+"{}".format(i)+'.txt'
-        shutil.copyfile(original, target)
-        writeOnLine("#")
-    writeOnLine("]")
+    #I give the text-file value and copy it 10 times
     print("\n\(^o^)/   - Done\n")
 
     print("Engineering Bomb...")
-    writeOnLine("[")
-    for i in range(10):
-        zipObj = ZipFile('Bomb.zip'.format(i), 'w')
-        writeOnLine("#")
-        for i in range(10):
-            zipObj.write('test {}.txt'.format(i))
-    writeOnLine("]")
+    #I zip the files up into a Zip-folder
     print("\n\(^o^)/   - Done\n")
 
     print("Cleaning up your mess...")
