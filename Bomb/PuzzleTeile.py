@@ -11,6 +11,7 @@ writeOnLine("[")
             zipObj.write('test {}.txt'.format(i))
     writeOnLine("]")
 ------------------------------------------------------------------
+BOMB_BUILDER3
 
 
 PUZZLETEIL 2
@@ -26,6 +27,7 @@ writeOnLine("[")
     os.remove('bomb.zip')
     writeOnLine("]")
 ------------------------------------------------------------------
+BOMB_BUILDER1
 
 
 PUZZLETEIL 3
@@ -40,6 +42,7 @@ os.chdir(myDirectory)
                 subprocess.Popen(r'explorer /select,' +
                                  "{}\Bomb{}".format(myDirectory, i) + r'\test 0.txt')
 ------------------------------------------------------------------
+TRIGGER
 
 
 PUZZLETEIL 4
@@ -56,7 +59,7 @@ writeOnLine("[")
         writeOnLine("#")
     writeOnLine("]")
 ------------------------------------------------------------------
-
+BOMB_BUILDER2
 
 
 
