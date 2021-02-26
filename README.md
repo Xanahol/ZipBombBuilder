@@ -7,7 +7,7 @@ Educational application to simulate the possible harm a small ZIP-Bomb-Script ca
 
 ## Purpose and what I learned
 
-How to teach about system-securities and a few tricks on how to manage/compress files in a script.
+How to teach about **system-securities** and a few tricks on how to **manage/compress files** in a script.
 
 ## Status
 
